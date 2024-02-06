@@ -299,8 +299,8 @@ public class OPDS1Parser: Loggable {
 
     static func parseEntry(entry: Fuzi.XMLElement) -> Publication? {
         // Shortcuts to get tag(s)' string value.
-        func tag(_ name: String) -> String? {
-            entry.firstChild(tag: name)?.stringValue
+        func tag(_ name: String, inNamespace namespace: XMLCharsComparable? = nil) -> String? {
+            entry.firstChild(tag: name, inNamespace: namespace)?.stringValue
         }
         func tags(_ name: String) -> [String] {
             entry.children(tag: name).map(\.stringValue)
@@ -335,7 +335,7 @@ public class OPDS1Parser: Loggable {
             identifier: tag("identifier") ?? tag("id"),
             title: title,
             modified: tag("updated")?.dateFromISO8601,
-            published: tag("published")?.dateFromISO8601,
+            published: tag("published")?.dateFromISO8601 ?? tag("issued", inNamespace: "dc")?.dateFromISO8601,
             languages: tags("language"),
             subjects: subjects,
             authors: authors,
