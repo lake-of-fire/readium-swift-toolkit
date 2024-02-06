@@ -335,7 +335,7 @@ public class OPDS1Parser: Loggable {
             identifier: tag("identifier") ?? tag("id"),
             title: title,
             modified: tag("updated")?.dateFromISO8601,
-            published: tag("published")?.dateFromISO8601 ?? tag("issued", inNamespace: "dc")?.dateFromISO8601,
+            published: tag("issued", inNamespace: "dc")?.dateFromISO8601 ?? tag("published")?.dateFromISO8601,
             languages: tags("language"),
             subjects: subjects,
             authors: authors,
