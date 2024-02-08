@@ -5,7 +5,9 @@
 //
 
 import Foundation
-//import UIKit
+#if os(iOS)
+import UIKit
+#endif
 
 /// Delegate protocol for `DefaultHTTPClient`.
 public protocol DefaultHTTPClientDelegate: AnyObject {
