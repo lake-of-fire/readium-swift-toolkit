@@ -28,8 +28,7 @@ let package = Package(
         .package(url: "https://github.com/marmelroy/Zip.git", from: "2.1.2"),
 //        .package(url: "https://github.com/ra1028/DifferenceKit.git", from: "1.3.0"),
 //        .package(url: "https://github.com/readium/GCDWebServer.git", from: "3.7.4"),
-        // From 2.6.0, Xcode 14 is required
-        .package(url: "https://github.com/scinfu/SwiftSoup.git", from: "2.6.0"),
+        .package(url: "https://github.com/lake-of-fire/SwiftSoup.git", branch: "master"),
 //        .package(url: "https://github.com/lake-of-fire/SwiftSoup.git", from: "2.6.0"),
         // 0.14 introduced a breaking change
 //        .package(url: "https://github.com/stephencelis/SQLite.swift.git", "0.12.0" ..< "0.13.3"),
