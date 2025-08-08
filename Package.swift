@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.9
 //
 //  Copyright 2021 Readium Foundation. All rights reserved.
 //  Use of this source code is governed by the BSD-style license
@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "Readium",
     defaultLocalization: "en",
-    platforms: [.iOS(.v13), .macOS(.v10_15)],
+    platforms: [.iOS(.v13), .macOS(.v13)],
     products: [
         .library(name: "R2Shared", targets: ["R2Shared"]),
 //        .library(name: "R2Streamer", targets: ["R2Streamer"]),
@@ -49,7 +49,7 @@ let package = Package(
                 .process("Resources"),
             ],
             linkerSettings: [
-                .linkedFramework("CoreServices"),
+//                .linkedFramework("CoreServices"),
 //                .linkedFramework("UIKit"),
             ]
         ),

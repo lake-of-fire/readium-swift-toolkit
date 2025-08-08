@@ -6,6 +6,7 @@
 
 import CoreServices
 import Foundation
+//import UniformTypeIdentifiers
 
 /// Uniform Type Identifier.
 struct UTI: ExpressibleByStringLiteral {

@@ -78,10 +78,10 @@ public struct MediaType: Hashable, Loggable {
         MediaType.of(mediaType: string) ?? self
     }
 
-    /// Returns the UTI (Uniform Type Identifier) matching this media type, if any.
-    public var uti: String? {
-        UTI.findFrom(mediaTypes: [self], fileExtensions: Array(ofNotNil: fileExtension))?.string
-    }
+//    /// Returns the UTI (Uniform Type Identifier) matching this media type, if any.
+//    public var uti: String? {
+//        UTI.findFrom(mediaTypes: [self], fileExtensions: Array(ofNotNil: fileExtension))?.string
+//    }
 
     public init?(_ string: String, name: String? = nil, fileExtension: String? = nil) {
         guard !string.isEmpty else {
@@ -234,12 +234,12 @@ public struct MediaType: Hashable, Loggable {
         matchesAny(.readiumWebPubManifest, .readiumAudiobookManifest, .divinaManifest)
     }
 
-    /// Returns whether this media type is declared in the Document Types section of the app's main
-    /// bundle.
-    public var isSupportedDocumentType: Bool {
-        DocumentTypes.main.supportsMediaType(string)
-            || DocumentTypes.main.supportsFileExtension(fileExtension)
-    }
+//    /// Returns whether this media type is declared in the Document Types section of the app's main
+//    /// bundle.
+//    public var isSupportedDocumentType: Bool {
+//        DocumentTypes.main.supportsMediaType(string)
+//            || DocumentTypes.main.supportsFileExtension(fileExtension)
+//    }
 
     // MARK: Known Media Types
 

@@ -4,7 +4,7 @@
 //  available in the top-level LICENSE file of the project.
 //
 
-import CoreServices
+//import CoreServices
 import Foundation
 
 #if canImport(UniformTypeIdentifiers)
